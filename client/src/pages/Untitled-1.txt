@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-error-container":"#93000a","on-surface":"#1b1c1c","on-primary":"#ffffff","surface-container-low":"#f5f3f3","surface-container":"#efeded","outline-variant":"#c4c7c7","tertiary-container":"#1c1c19","tertiary":"#000000","surface":"#fbf9f8","primary":"#000000","secondary-fixed":"#d0f12f","primary-fixed":"#e5e2e1","background":"#fbf9f8","on-secondary":"#ffffff","on-secondary-fixed":"#181e00","tertiary-fixed":"#e5e2dd","inverse-on-surface":"#f2f0f0","surface-container-high":"#e9e8e7","secondary":"#556500","surface-bright":"#fbf9f8","on-primary-container":"#858383","surface-dim":"#dbdad9","error-container":"#ffdad6","on-tertiary-container":"#858480","surface-tint":"#5f5e5e","inverse-primary":"#c9c6c5","surface-variant":"#e4e2e2","on-tertiary-fixed":"#1c1c19","on-primary-fixed":"#1c1b1b","on-error":"#ffffff","outline":"#747878","on-tertiary-fixed-variant":"#474743","secondary-container":"#d0f12f","secondary-fixed-dim":"#b5d400","on-primary-fixed-variant":"#474646","on-secondary-container":"#5b6b00","inverse-surface":"#303031","primary-container":"#1c1b1b","on-tertiary":"#ffffff","tertiary-fixed-dim":"#c9c6c1","surface-container-lowest":"#ffffff","on-secondary-fixed-variant":"#404c00","error":"#ba1a1a","on-surface-variant":"#444748","primary-fixed-dim":"#c9c6c5","on-background":"#1b1c1c","surface-container-highest":"#e4e2e2"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin":"1rem","margin-desktop":"3rem","space-xl":"2.5rem","space-md":"1rem","space-2xl":"4rem","space-lg":"1.5rem","space-xs":"0.25rem","space-3xl":"6rem","gutter-desktop":"1.5rem","gutter":"1rem","margin-tablet":"2rem","space-sm":"0.5rem"},"fontFamily":{"body-md":["Inter"],"title-editorial":["Manrope"],"display-hero-mobile":["Manrope"],"headline-lg":["Manrope"],"headline-sm":["Manrope"],"label-badge":["Manrope"],"headline-md":["Manrope"],"label-mono-sm":["JetBrains Mono"],"display-hero":["Manrope"],"headline-lg-mobile":["Manrope"],"body-lg":["Inter"],"body-sm":["Inter"]},"fontSize":{"body-md":["15px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"400"}],"title-editorial":["16px",{"lineHeight":"22px","letterSpacing":"0.04em","fontWeight":"700"}],"display-hero-mobile":["40px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"800"}],"headline-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"800"}],"headline-sm":["20px",{"lineHeight":"28px","letterSpacing":"-0.005em","fontWeight":"700"}],"label-badge":["12px",{"lineHeight":"16px","letterSpacing":"0.05em","fontWeight":"800"}],"headline-md":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"700"}],"label-mono-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"500"}],"display-hero":["64px",{"lineHeight":"72px","letterSpacing":"-0.03em","fontWeight":"800"}],"headline-lg-mobile":["28px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"700"}],"body-lg":["18px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"400"}],"body-sm":["13px",{"lineHeight":"20px","fontWeight":"400"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col flex-1 min-h-0"><div class="p-space-lg flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 bg-primary flex items-center justify-center rounded-lg shadow-sm"><span class="font-headline-sm text-headline-sm text-secondary-container font-extrabold">B</span></div><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight uppercase">BAROKAH</span><span class="font-label-mono-sm text-label-mono-sm bg-secondary-container text-on-secondary-fixed px-1.5 py-0.5 rounded-lg font-bold">PRO</span></div><span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase tracking-wider">ATELIER ENGINE</span></div></div></div><nav class="flex-1 px-space-md py-space-sm space-y-1 overflow-y-auto" data-active-classes="bg-primary text-on-primary font-bold rounded-lg shadow-sm"><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="dashboard" href="#dashboard"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-body-md text-body-md">Dashboard</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="manajemen-produk" href="#products"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span class="font-body-md text-body-md">Manajemen Produk</span></div><span class="font-label-mono-sm text-label-mono-sm px-2 py-0.5 bg-surface-container-high text-on-surface rounded-full">48</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="kategori-produk" href="#categories"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">category</span><span class="font-body-md text-body-md">Kategori Produk</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="ukuran-&amp;-stok" href="#inventory"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">straighten</span><span class="font-body-md text-body-md">Ukuran &amp; Stok</span></div><span class="font-label-mono-sm text-label-mono-sm px-2 py-0.5 bg-error-container text-on-error-container rounded-full">2 Low</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="pesanan" href="#orders"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">shopping_bag</span><span class="font-body-md text-body-md">Pesanan</span></div><span class="font-label-mono-sm text-label-mono-sm px-2 py-0.5 bg-secondary-container text-on-secondary-fixed rounded-full">12 Baru</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="pembayaran" href="#payments"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">payments</span><span class="font-body-md text-body-md">Pembayaran</span></div><span class="font-label-mono-sm text-label-mono-sm px-2 py-0.5 bg-surface-container-high text-on-surface rounded-full">5 Verif</span></a><a aria-current="page" class="flex items-center justify-between px-space-md py-space-sm transition-all bg-primary text-on-primary font-bold rounded-lg shadow-sm" data-path="pelanggan" href="#customers"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">group</span><span class="font-body-md text-body-md">Pelanggan</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="laporan-penjualan" href="#reports"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">monitoring</span><span class="font-body-md text-body-md">Laporan Penjualan</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="pengaturan-toko" href="#settings"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">tune</span><span class="font-body-md text-body-md">Pengaturan Toko</span></div></a></nav></div><div class="p-space-md mx-space-md mb-space-md bg-surface-container-low rounded-xl flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-full bg-primary flex items-center justify-center font-headline-sm text-headline-sm text-on-primary">RA</div><div class="flex flex-col"><span class="font-title-editorial text-title-editorial text-on-surface leading-tight">Raka Aditya</span><span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Super Admin</span></div></div><a class="p-1.5 text-on-surface-variant hover:text-error hover:bg-surface-container rounded-lg transition-colors" data-path="logout" href="#"><span class="material-symbols-outlined text-[20px]">logout</span></a></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-xl"><div class="flex items-center gap-space-xl flex-1 max-w-xl"><div class="relative w-full max-w-md"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span><input class="w-full h-10 pl-9 pr-14 bg-surface-container-lowest text-on-surface placeholder:text-on-surface-variant text-body-sm font-body-sm rounded-lg focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Cari SKU, Pesanan, Pelanggan..." type="text"/><kbd class="absolute right-2.5 top-1/2 -translate-y-1/2 font-label-mono-sm text-label-mono-sm text-on-surface-variant bg-surface-container px-1.5 py-0.5 rounded">⌘K</kbd></div></div><div class="flex items-center gap-space-lg"><div class="hidden sm:flex items-center gap-2 px-space-md py-1 bg-surface-container-lowest rounded-full shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span><span class="font-label-mono-sm text-label-mono-sm text-on-surface">Supabase: Connected JKT-01</span></div><button class="relative p-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-lg transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-secondary-container font-label-mono-sm text-[10px] font-bold">7</span></button><a class="inline-flex items-center gap-space-xs px-space-md py-2 bg-secondary-container text-on-secondary-fixed hover:bg-secondary-fixed-dim rounded-lg font-headline-sm text-headline-sm text-xs uppercase tracking-wider font-extrabold transition-colors shadow-sm" data-path="tambah-produk" href="#"><span class="material-symbols-outlined text-[16px]">add</span>TAMBAH PRODUK</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-surface min-h-screen w-full px-space-xl py-space-xl"><div class="flex flex-col w-full gap-space-xl">
+<!-- Top Bar / Breadcrumb & Actions -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-2">
+<span class="font-label-mono-sm text-label-mono-sm uppercase tracking-wider text-on-surface-variant">Admin</span>
+<span class="text-on-surface-variant/40 font-label-mono-sm text-label-mono-sm">/</span>
+<span class="font-label-mono-sm text-label-mono-sm uppercase tracking-wider text-on-surface-variant">Pengguna</span>
+<span class="text-on-surface-variant/40 font-label-mono-sm text-label-mono-sm">/</span>
+<span class="font-label-mono-sm text-label-mono-sm uppercase tracking-widest text-secondary-container bg-primary px-2 py-0.5 rounded-lg">Pelanggan</span>
+</div>
+<div class="flex items-baseline gap-space-md">
+<h1 class="font-headline-lg text-headline-lg text-on-surface uppercase tracking-tight">Direktori Pelanggan</h1>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">SUPABASE: profiles · addresses · orders</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="inline-flex items-center gap-2 px-space-md py-2.5 bg-surface-container-high hover:bg-surface-container-highest text-on-surface rounded-lg font-title-editorial text-title-editorial transition-all shadow-sm" id="btnExport">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Ekspor CSV</span>
+</button>
+<button class="inline-flex items-center gap-2 px-space-md py-2.5 bg-primary text-secondary-container hover:bg-primary-container rounded-lg font-title-editorial text-title-editorial uppercase tracking-wider transition-all shadow-md" id="btnBroadcast">
+<span class="material-symbols-outlined text-[18px]">campaign</span>
+<span>Kirim Broadcast Drop</span>
+</button>
+</div>
+</div>
+<!-- Primary Metric Highlights (3-Stat Grid) -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Stat 1: Total Registered -->
+<div class="relative overflow-hidden bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm uppercase tracking-wider text-on-surface-variant">Total Terdaftar</span>
+<span class="inline-flex items-center gap-1 font-label-mono-sm text-label-mono-sm text-secondary font-bold bg-secondary-container/30 px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> +128 bln ini
+        </span>
+</div>
+<div class="my-space-md flex items-baseline gap-space-sm">
+<span class="font-display-hero text-display-hero text-on-surface tracking-tighter leading-none">3.420</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Akun</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 78%;"></div>
+</div>
+<div class="mt-2 flex items-center justify-between font-label-mono-sm text-label-mono-sm text-on-surface-variant">
+<span>Target Q1: 4.000</span>
+<span>85.5% Capai</span>
+</div>
+</div>
+<!-- Stat 2: VIP Club Tier -->
+<div class="relative overflow-hidden bg-primary text-on-primary p-space-lg rounded-xl shadow-md flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary-container animate-ping"></span>
+<span class="font-label-mono-sm text-label-mono-sm uppercase tracking-wider text-secondary-container">Secret Drop Tier</span>
+</div>
+<span class="material-symbols-outlined text-secondary-container text-[20px]">stars</span>
+</div>
+<div class="my-space-md flex items-baseline gap-space-sm">
+<span class="font-display-hero text-display-hero text-secondary-container tracking-tighter leading-none">1.140</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-primary/70">Club VIP</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-primary/80">33.3% dari total user mengantongi tiket early-access exclusive release.</p>
+</div>
+<!-- Stat 3: Repeat Order Rate -->
+<div class="relative overflow-hidden bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm uppercase tracking-wider text-on-surface-variant">Repeat Purchase Rate</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">sync</span>
+</div>
+<div class="my-space-md flex items-baseline gap-space-sm">
+<span class="font-display-hero text-display-hero text-on-surface tracking-tighter leading-none">31.4%</span>
+<span class="font-label-mono-sm text-label-mono-sm text-secondary font-bold">+4.2% YoY</span>
+</div>
+<!-- Inline Sparkline / Flow Indicator -->
+<div class="flex items-center gap-1.5 h-6">
+<span class="h-2 w-full bg-surface-container-high rounded-sm"></span>
+<span class="h-3 w-full bg-surface-container-high rounded-sm"></span>
+<span class="h-4 w-full bg-surface-container-high rounded-sm"></span>
+<span class="h-3 w-full bg-surface-container-high rounded-sm"></span>
+<span class="h-5 w-full bg-surface-container-high rounded-sm"></span>
+<span class="h-6 w-full bg-secondary-container rounded-sm"></span>
+</div>
+<span class="mt-2 font-label-mono-sm text-label-mono-sm text-on-surface-variant">Rerata 2.4 pasang per pelanggan loyal</span>
+</div>
+</div>
+<!-- Filter & Controls Toolbar -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-md">
+<!-- Search Query Input -->
+<div class="relative flex-1 max-w-lg">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span>
+<input class="w-full h-11 pl-11 pr-4 bg-surface-container-low rounded-lg text-on-surface font-body-sm text-body-sm placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container" id="searchInput" placeholder="Cari nama pelanggan, email, nomor WhatsApp..." type="text"/>
+</div>
+<!-- Segment Controls & Filters -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<!-- Member Status Filter -->
+<div class="flex items-center bg-surface-container-low p-1 rounded-lg">
+<button class="filter-tab px-3 py-1.5 rounded-lg font-label-mono-sm text-label-mono-sm bg-primary text-on-primary font-bold shadow-sm" data-filter="all">Semua (3.420)</button>
+<button class="filter-tab px-3 py-1.5 rounded-lg font-label-mono-sm text-label-mono-sm text-on-surface-variant hover:text-on-surface transition-colors" data-filter="vip">VIP Club (1.140)</button>
+<button class="filter-tab px-3 py-1.5 rounded-lg font-label-mono-sm text-label-mono-sm text-on-surface-variant hover:text-on-surface transition-colors" data-filter="reguler">Reguler</button>
+</div>
+<!-- Account State Select -->
+<select class="h-11 px-3 bg-surface-container-low text-on-surface font-label-mono-sm text-label-mono-sm rounded-lg focus:outline-none cursor-pointer" id="statusFilter">
+<option value="">Status Akun: Semua</option>
+<option value="aktif">Status: Aktif</option>
+<option value="pending">Status: Menunggu Verifikasi</option>
+<option value="nonaktif">Status: Non-aktif</option>
+</select>
+<!-- Reset Filter Button -->
+<button class="w-11 h-11 flex items-center justify-center bg-surface-container-low hover:bg-surface-container text-on-surface-variant rounded-lg transition-colors" id="btnResetFilter" title="Reset filter">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+</button>
+</div>
+</div>
+<!-- Customer Directory Matrix Table -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low/70 text-on-surface-variant font-label-mono-sm text-label-mono-sm uppercase">
+<th class="py-3.5 px-space-md font-semibold">Pelanggan</th>
+<th class="py-3.5 px-space-md font-semibold">Kontak &amp; Supabase UID</th>
+<th class="py-3.5 px-space-md font-semibold">Bergabung</th>
+<th class="py-3.5 px-space-md font-semibold">Tier Status</th>
+<th class="py-3.5 px-space-md font-semibold">LTV / Volume</th>
+<th class="py-3.5 px-space-md font-semibold">Size Fav</th>
+<th class="py-3.5 px-space-md font-semibold text-right">Aksi</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm" id="customerTableBody">
+<!-- Row 1: Dimas Bagus (Primary profile showcase) -->
+<tr class="hover:bg-surface-container-low/40 transition-colors cursor-pointer group" onclick="openDrawer('dimas')">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="relative w-10 h-10 rounded-full overflow-hidden bg-surface-container-high flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Close up streetwear fashion portrait of an Indonesian young man wearing black technical hoodie and cap in studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQuqXuOan61jhVpPq34csD0zxbCoYbcc6SUpB42ha5OQ2aO3ue38LzZTIX5Ob_ABEQWIk5o4Loj1QqOstJtpMLI3zX2j9PAkek2PAP2nyqaGVWSkna0fHdOUAw8MQaUusiSgqAWlQUf3lGbmXILVmhnfnGvS2QrpWzMfu7q9T9xzRZhxnGnllNDyQcsoE0ZT1aUipAJCuyCJJb5c5QoG3o2jzTxICbBqiGyD2fGEhuxK5KCMXhOj1cFQ"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-editorial text-title-editorial text-on-surface group-hover:text-primary transition-colors">Dimas Bagus Ramadhan</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">ID: usr_01HN7A9K3</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="text-on-surface font-body-sm">dimas.bagus@atelier.id</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">+62 812-9921-3990</span>
+</div>
+</td>
+<td class="py-space-md px-space-md font-label-mono-sm text-label-mono-sm text-on-surface-variant">
+              14 Jan 2024
+            </td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 font-label-mono-sm text-label-mono-sm bg-primary text-secondary-container px-2 py-0.5 rounded-full font-bold">
+<span class="material-symbols-outlined text-[12px]">verified</span> VIP SNEAKERHEAD
+              </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-title-editorial text-title-editorial text-on-surface">Rp 14.850.000</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">6 Transaksi Selesai</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-block px-2.5 py-1 bg-surface-container text-on-surface font-label-mono-sm text-label-mono-sm font-bold rounded">EU 42</span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="inline-flex items-center gap-1" onclick="event.stopPropagation()">
+<button class="p-2 hover:bg-surface-container rounded-lg text-on-surface-variant hover:text-on-surface transition-colors" onclick="openDrawer('dimas')" title="Lihat Profil">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-2 hover:bg-surface-container rounded-lg text-on-surface-variant hover:text-on-surface transition-colors" onclick="openOrderModal('dimas')" title="Riwayat Pesanan">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Arya Sena Pratama -->
+<tr class="hover:bg-surface-container-low/40 transition-colors cursor-pointer group" onclick="openDrawer('arya')">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-primary flex items-center justify-center text-secondary-container font-headline-sm text-headline-sm flex-shrink-0">
+                  AS
+                </div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-editorial text-title-editorial text-on-surface group-hover:text-primary transition-colors">Arya Sena Pratama</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">ID: usr_01HN7B022</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="text-on-surface font-body-sm">aryasena.p@hypehouse.co</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">+62 811-8840-2211</span>
+</div>
+</td>
+<td class="py-space-md px-space-md font-label-mono-sm text-label-mono-sm text-on-surface-variant">
+              03 Feb 2024
+            </td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 font-label-mono-sm text-label-mono-sm bg-primary text-secondary-container px-2 py-0.5 rounded-full font-bold">
+<span class="material-symbols-outlined text-[12px]">stars</span> VIP COLLECTOR
+              </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-title-editorial text-title-editorial text-on-surface">Rp 22.400.000</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">9 Transaksi Selesai</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-block px-2.5 py-1 bg-surface-container text-on-surface font-label-mono-sm text-label-mono-sm font-bold rounded">EU 43</span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="inline-flex items-center gap-1" onclick="event.stopPropagation()">
+<button class="p-2 hover:bg-surface-container rounded-lg text-on-surface-variant hover:text-on-surface transition-colors" onclick="openDrawer('arya')" title="Lihat Profil">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-2 hover:bg-surface-container rounded-lg text-on-surface-variant hover:text-on-surface transition-colors" onclick="openOrderModal('arya')" title="Riwayat Pesanan">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Clarissa Angela -->
+<tr class="hover:bg-surface-container-low/40 transition-colors cursor-pointer group" onclick="openDrawer('clarissa')">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="relative w-10 h-10 rounded-full overflow-hidden bg-surface-container-high flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Portrait of an elegant young East Asian woman with minimalist modern streetwear aesthetics in neutral minimalist studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3dh_lfbXvvjDIh2fKSYMG19wtZ7JSMjRLJGcy3_3HlmsfsKZf4P4ymc5CWsitEy2BfhVRjVIqP6vzhID6y9htD8RjBjkwIrD5KA7lMLielsO18VOhMnZzykV_Wb5bqFY7eC35L8Vd3I8f2AyaG8punUCvQMmACvmlL-A6vykb8Z6QiuCXIMGxSk_0295DE7VogsUPPevUy0fyGDVyVWhWMJC5HmUkwNz5tvSipkLQjLXwi4XxE6GYhg"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-editorial text-title-editorial text-on-surface group-hover:text-primary transition-colors">Clarissa Angela</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">ID: usr_01HN7CC90</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="text-on-surface font-body-sm">clarissa.angela@creative.id</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">+62 813-1100-9882</span>
+</div>
+</td>
+<td class="py-space-md px-space-md font-label-mono-sm text-label-mono-sm text-on-surface-variant">
+              19 Feb 2024
+            </td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 font-label-mono-sm text-label-mono-sm bg-surface-container-high text-on-surface px-2 py-0.5 rounded-full">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Member Aktif
+              </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-title-editorial text-title-editorial text-on-surface">Rp 5.290.000</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">2 Transaksi Selesai</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-block px-2.5 py-1 bg-surface-container text-on-surface font-label-mono-sm text-label-mono-sm font-bold rounded">EU 38.5</span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="inline-flex items-center gap-1" onclick="event.stopPropagation()">
+<button class="p-2 hover:bg-surface-container rounded-lg text-on-surface-variant hover:text-on-surface transition-colors" onclick="openDrawer('clarissa')" title="Lihat Profil">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-2 hover:bg-surface-container rounded-lg text-on-surface-variant hover:text-on-surface transition-colors" onclick="openOrderModal('clarissa')" title="Riwayat Pesanan">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Hendra Kurniawan -->
+<tr class="hover:bg-surface-container-low/40 transition-colors cursor-pointer group" onclick="openDrawer('hendra')">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center font-headline-sm text-headline-sm text-on-surface flex-shrink-0">
+                  HK
+                </div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-editorial text-title-editorial text-on-surface group-hover:text-primary transition-colors">Hendra Kurniawan</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">ID: usr_01HN8DE44</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="text-on-surface font-body-sm">hendra.kurnia@runnerlab.id</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">+62 856-7890-1234</span>
+</div>
+</td>
+<td class="py-space-md px-space-md font-label-mono-sm text-label-mono-sm text-on-surface-variant">
+              01 Mar 2024
+            </td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 font-label-mono-sm text-label-mono-sm bg-surface-container-high text-on-surface px-2 py-0.5 rounded-full">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Member Aktif
+              </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-title-editorial text-title-editorial text-on-surface">Rp 3.899.000</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">1 Transaksi Selesai</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-block px-2.5 py-1 bg-surface-container text-on-surface font-label-mono-sm text-label-mono-sm font-bold rounded">EU 44</span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="inline-flex items-center gap-1" onclick="event.stopPropagation()">
+<button class="p-2 hover:bg-surface-container rounded-lg text-on-surface-variant hover:text-on-surface transition-colors" onclick="openDrawer('hendra')" title="Lihat Profil">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-2 hover:bg-surface-container rounded-lg text-on-surface-variant hover:text-on-surface transition-colors" onclick="openOrderModal('hendra')" title="Riwayat Pesanan">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: Raka Aditya (Secondary Admin & Staff Shopper) -->
+<tr class="hover:bg-surface-container-low/40 transition-colors cursor-pointer group" onclick="openDrawer('raka')">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center font-headline-sm text-headline-sm text-on-primary flex-shrink-0">
+                  RA
+                </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1">
+<span class="font-title-editorial text-title-editorial text-on-surface group-hover:text-primary transition-colors">Raka Aditya</span>
+<span class="font-label-mono-sm text-[10px] bg-secondary-container text-on-secondary-fixed font-bold px-1 rounded">INTERNAL</span>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">ID: usr_01HN8FF99</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="text-on-surface font-body-sm">raka.aditya@barokah.pro</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">+62 811-9988-7711</span>
+</div>
+</td>
+<td class="py-space-md px-space-md font-label-mono-sm text-label-mono-sm text-on-surface-variant">
+              10 Des 2023
+            </td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 font-label-mono-sm text-label-mono-sm bg-primary text-secondary-container px-2 py-0.5 rounded-full font-bold">
+<span class="material-symbols-outlined text-[12px]">shield</span> ATELIER STAFF
+              </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-title-editorial text-title-editorial text-on-surface">Rp 8.120.000</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">4 Transaksi Selesai</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-block px-2.5 py-1 bg-surface-container text-on-surface font-label-mono-sm text-label-mono-sm font-bold rounded">EU 41</span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="inline-flex items-center gap-1" onclick="event.stopPropagation()">
+<button class="p-2 hover:bg-surface-container rounded-lg text-on-surface-variant hover:text-on-surface transition-colors" onclick="openDrawer('raka')" title="Lihat Profil">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-2 hover:bg-surface-container rounded-lg text-on-surface-variant hover:text-on-surface transition-colors" onclick="openOrderModal('raka')" title="Riwayat Pesanan">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination & Row Info -->
+<div class="p-space-md bg-surface-container-low/50 flex flex-col sm:flex-row items-center justify-between gap-space-sm font-label-mono-sm text-label-mono-sm text-on-surface-variant">
+<span>Menampilkan 5 dari 3.420 data pengguna terdaftar</span>
+<div class="flex items-center gap-1">
+<button class="px-3 py-1 rounded bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer" disabled="">Sebelumnya</button>
+<button class="px-3 py-1 rounded bg-primary text-secondary-container font-bold">1</button>
+<button class="px-3 py-1 rounded bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors">2</button>
+<button class="px-3 py-1 rounded bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors">3</button>
+<span class="px-2">...</span>
+<button class="px-3 py-1 rounded bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors">684</button>
+<button class="px-3 py-1 rounded bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors">Berikutnya</button>
+</div>
+</div>
+</div>
+<!-- Detail Pelanggan & CRM Drawer (Slide-Over Panel) -->
+<div class="fixed inset-0 z-50 pointer-events-none transition-all duration-300" id="customerDrawer">
+<!-- Backdrop -->
+<div class="absolute inset-0 bg-primary/40 backdrop-blur-sm opacity-0 transition-opacity duration-300" id="drawerBackdrop" onclick="closeDrawer()"></div>
+<!-- Drawer Content Surface -->
+<div class="absolute right-0 top-0 h-full w-full max-w-2xl bg-surface-container-lowest shadow-2xl flex flex-col translate-x-full transition-transform duration-300 overflow-y-auto" id="drawerPanel">
+<!-- Drawer Header Bar -->
+<div class="sticky top-0 bg-surface-container-lowest/95 backdrop-blur-md px-space-xl py-space-md flex items-center justify-between z-10">
+<div class="flex items-center gap-2">
+<span class="font-label-mono-sm text-label-mono-sm uppercase tracking-wider text-secondary bg-secondary-container/40 px-2 py-0.5 rounded font-bold">DETAIL PELANGGAN CRM</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Supabase Auth verified</span>
+</div>
+<button class="w-9 h-9 flex items-center justify-center rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors" onclick="closeDrawer()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="p-space-xl flex flex-col gap-space-xl">
+<!-- Profile Identity Card -->
+<div class="bg-primary text-on-primary p-space-lg rounded-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-lg">
+<div class="flex items-center gap-space-md">
+<div class="relative w-16 h-16 rounded-full overflow-hidden bg-surface-container-high ring-2 ring-secondary-container/80 flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="High quality editorial headshot portrait of stylish young Indonesian streetwear enthusiast with warm studio backlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4I6toKh2cl5O_f7XEbWlETlZoFLwzk-R4RoewG5RfHpu8-QIyXGlnEzS51lteR1Gai3QbREEGkaW9-WwdFfQ6sLYCKleDgk23KBcVHrZtaWS8ecuN6eTO-aVlRNtyzxKCIG9GjzV0kiGACixu2UhOQueNpY_Mku1DealKGKuJdAKX3kefC68EslLg84a7YsgJJA9eioWwjfrv0XKbdY7EtkxB0H4oyrKVs0SAfMPBgZ-oaSnT_Bq7uQ"/>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<h2 class="font-headline-sm text-headline-sm text-on-primary">Dimas Bagus Ramadhan</h2>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-secondary-container font-semibold">VIP SNEAKERHEAD COLLECTOR</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-primary/60 mt-1">UUID: eb9f8841-a1cf-49b8-bc81-bdfc946e33aa</span>
+</div>
+</div>
+<div class="flex flex-col items-start sm:items-end">
+<span class="font-label-mono-sm text-label-mono-sm text-on-primary/60">Total Pembelanjaan (LTV)</span>
+<span class="font-headline-md text-headline-md text-secondary-container font-bold leading-tight">Rp 14.850.000</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-primary/70">6 Transaksi Lunas</span>
+</div>
+</div>
+<!-- Metric Badges Row -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm font-label-mono-sm text-label-mono-sm">
+<div class="p-space-md bg-surface-container rounded-lg flex flex-col">
+<span class="text-on-surface-variant uppercase">Ukuran Sepatu</span>
+<span class="font-title-editorial text-title-editorial text-on-surface mt-1">EU 42 / US 8.5</span>
+</div>
+<div class="p-space-md bg-surface-container rounded-lg flex flex-col">
+<span class="text-on-surface-variant uppercase">Drop Early-Pass</span>
+<span class="font-title-editorial text-title-editorial text-secondary font-bold mt-1">Tier 1 Active</span>
+</div>
+<div class="p-space-md bg-surface-container rounded-lg flex flex-col">
+<span class="text-on-surface-variant uppercase">WhatsApp Notif</span>
+<span class="font-title-editorial text-title-editorial text-on-surface mt-1">Terhubung</span>
+</div>
+<div class="p-space-md bg-surface-container rounded-lg flex flex-col">
+<span class="text-on-surface-variant uppercase">Bergabung</span>
+<span class="font-title-editorial text-title-editorial text-on-surface mt-1">14 Jan 2024</span>
+</div>
+</div>
+<!-- Collection Preferences -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-mono-sm text-label-mono-sm uppercase tracking-wider text-on-surface-variant font-semibold">Preferensi Koleksi &amp; Silhouette</span>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1.5 bg-primary text-secondary-container font-label-mono-sm text-label-mono-sm rounded-lg font-bold">Running Performance</span>
+<span class="px-3 py-1.5 bg-primary text-secondary-container font-label-mono-sm text-label-mono-sm rounded-lg font-bold">Limited Drop Edition</span>
+<span class="px-3 py-1.5 bg-surface-container-high text-on-surface font-label-mono-sm text-label-mono-sm rounded-lg">Gorpcore Outdoor</span>
+<span class="px-3 py-1.5 bg-surface-container-high text-on-surface font-label-mono-sm text-label-mono-sm rounded-lg">Retro Court Low</span>
+</div>
+</div>
+<!-- Registered Addresses Section (`addresses` table) -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm uppercase tracking-wider text-on-surface-variant font-semibold">Buku Alamat Terdaftar (2)</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Sinkron Supabase addresses</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<!-- Address 1: Primary Home -->
+<div class="p-space-md bg-surface-container-low rounded-xl flex flex-col justify-between">
+<div class="flex flex-col">
+<div class="flex items-center justify-between mb-1.5">
+<span class="font-title-editorial text-title-editorial text-on-surface">Rumah (Utama)</span>
+<span class="font-label-mono-sm text-label-mono-sm bg-primary text-secondary-container px-2 py-0.5 rounded font-bold">DEFAULT</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface leading-snug">
+                  Jl. Senopati No. 42, Kebayoran Baru, Jakarta Selatan, DKI Jakarta 12190
+                </p>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant mt-2">Penerima: Dimas B. (+62 812-9921-3990)</span>
+</div>
+</div>
+<!-- Address 2: Office -->
+<div class="p-space-md bg-surface-container-low rounded-xl flex flex-col justify-between">
+<div class="flex flex-col">
+<div class="flex items-center justify-between mb-1.5">
+<span class="font-title-editorial text-title-editorial text-on-surface">Kantor SCBD</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant bg-surface-container-high px-2 py-0.5 rounded">SEKUNDER</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface leading-snug">
+                  Treasury Tower Lt. 28, Pacific Century Place, SCBD Lot 8, Jakarta Selatan 12190
+                </p>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant mt-2">Catatan: Resepsionis Lobby Barat</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Recent 3 Orders History (`orders` table) -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm uppercase tracking-wider text-on-surface-variant font-semibold">3 Riwayat Pesanan Terakhir</span>
+<a class="font-label-mono-sm text-label-mono-sm text-secondary hover:underline" href="#">Lihat Semua 6 Pesanan →</a>
+</div>
+<div class="flex flex-col gap-space-xs">
+<!-- Order 1 -->
+<div class="p-space-md bg-surface-container-low rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-primary text-secondary-container flex items-center justify-center font-headline-sm text-headline-sm">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-title-editorial text-title-editorial text-on-surface">#BKH-9842</span>
+<span class="font-label-mono-sm text-label-mono-sm bg-secondary-container/40 text-secondary font-bold px-2 py-0.5 rounded">SELESAI</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">BAROKAH Cloudstrider Hyper-V (EU 42)</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-title-editorial text-title-editorial text-on-surface">Rp 3.490.000</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">12 Mar 2024</span>
+</div>
+</div>
+<!-- Order 2 -->
+<div class="p-space-md bg-surface-container-low rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-on-surface flex items-center justify-center font-headline-sm text-headline-sm">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-title-editorial text-title-editorial text-on-surface">#BKH-8910</span>
+<span class="font-label-mono-sm text-label-mono-sm bg-secondary-container/40 text-secondary font-bold px-2 py-0.5 rounded">SELESAI</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Atelier Ghost Court Monochrome Edition (EU 42)</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-title-editorial text-title-editorial text-on-surface">Rp 5.200.000</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">27 Feb 2024</span>
+</div>
+</div>
+<!-- Order 3 -->
+<div class="p-space-md bg-surface-container-low rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-on-surface flex items-center justify-center font-headline-sm text-headline-sm">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-title-editorial text-title-editorial text-on-surface">#BKH-7622</span>
+<span class="font-label-mono-sm text-label-mono-sm bg-secondary-container/40 text-secondary font-bold px-2 py-0.5 rounded">SELESAI</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Vanguard Tech Runner Volt Citrus (EU 42)</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-title-editorial text-title-editorial text-on-surface">Rp 6.160.000</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">14 Jan 2024</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Bar in Drawer -->
+<div class="pt-space-md flex items-center gap-space-sm">
+<button class="flex-1 py-3 px-4 bg-primary text-secondary-container font-title-editorial text-title-editorial uppercase tracking-wider rounded-lg hover:bg-primary-container transition-colors flex items-center justify-center gap-2 font-bold">
+<span class="material-symbols-outlined text-[18px]">send</span>
+            Kirim WhatsApp Direct
+          </button>
+<button class="py-3 px-4 bg-surface-container hover:bg-surface-container-high text-on-surface font-title-editorial text-title-editorial rounded-lg transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Broadcast Notification Modal Dialog -->
+<div class="fixed inset-0 z-50 pointer-events-none opacity-0 transition-opacity duration-200 flex items-center justify-center p-4" id="broadcastModal">
+<div class="absolute inset-0 bg-primary/60 backdrop-blur-sm" id="broadcastBackdrop" onclick="closeBroadcastModal()"></div>
+<div class="relative bg-surface-container-lowest w-full max-w-lg rounded-xl shadow-2xl p-space-xl flex flex-col gap-space-md z-10">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[22px]">campaign</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Kirim Drop Broadcast</h3>
+</div>
+<button class="p-1 hover:bg-surface-container rounded-lg text-on-surface-variant" onclick="closeBroadcastModal()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Pesan broadcast akan dikirim melalui gateway WhatsApp resmi dan Push Notification aplikasi kepada segmen pelanggan terpilih.
+      </p>
+<div class="flex flex-col gap-space-sm">
+<label class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface-variant">Target Penerima</label>
+<select class="w-full h-11 px-3 bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-lg focus:outline-none">
+<option>Semua Member VIP Club (1.140 Penerima)</option>
+<option>Pelanggan Size EU 42 &amp; 43 Saja (840 Penerima)</option>
+<option>Semua Pelanggan Terdaftar (3.420 Penerima)</option>
+</select>
+</div>
+<div class="flex flex-col gap-space-sm">
+<label class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface-variant">Template Notifikasi</label>
+<textarea class="w-full p-3 bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-lg focus:outline-none placeholder:text-on-surface-variant" placeholder="Contoh: [EXCLUSIVE ACCESS] Drop terbaru Barokah Cloudstrider Hyper-V telah dibuka untuk level Sneakerhead VIP. Gunakan kupon SECRET-VIP-24. Buka sekarang: ..." rows="4">[SECRET DROP ACCESS] Barokah Atelier baru saja meluncurkan 40 pasang edisi kolaborasi eksklusif. Akses privat Anda dibuka sekarang selama 60 menit.</textarea>
+</div>
+<div class="flex items-center justify-end gap-space-sm mt-2">
+<button class="px-space-md py-2.5 bg-surface-container hover:bg-surface-container-high text-on-surface rounded-lg font-title-editorial text-title-editorial transition-colors" onclick="closeBroadcastModal()">
+          Batal
+        </button>
+<button class="px-space-md py-2.5 bg-primary text-secondary-container hover:bg-primary-container rounded-lg font-title-editorial text-title-editorial uppercase tracking-wider font-extrabold transition-colors" onclick="confirmBroadcast()">
+          Kirim Sekarang (1.140 Target)
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple drawer toggle interactions
+  function openDrawer(customerId) {
+    const drawer = document.getElementById('customerDrawer');
+    const backdrop = document.getElementById('drawerBackdrop');
+    const panel = document.getElementById('drawerPanel');
+    
+    drawer.classList.remove('pointer-events-none');
+    backdrop.classList.remove('opacity-0');
+    backdrop.classList.add('opacity-100');
+    panel.classList.remove('translate-x-full');
+  }
+
+  function closeDrawer() {
+    const drawer = document.getElementById('customerDrawer');
+    const backdrop = document.getElementById('drawerBackdrop');
+    const panel = document.getElementById('drawerPanel');
+    
+    backdrop.classList.add('opacity-0');
+    backdrop.classList.remove('opacity-100');
+    panel.classList.add('translate-x-full');
+    setTimeout(() => {
+      drawer.classList.add('pointer-events-none');
+    }, 300);
+  }
+
+  function openOrderModal(customerId) {
+    // Open drawer focused directly
+    openDrawer(customerId);
+  }
+
+  // Broadcast Modal controls
+  const broadcastBtn = document.getElementById('btnBroadcast');
+  const broadcastModal = document.getElementById('broadcastModal');
+
+  if (broadcastBtn && broadcastModal) {
+    broadcastBtn.addEventListener('click', () => {
+      broadcastModal.classList.remove('pointer-events-none', 'opacity-0');
+      broadcastModal.classList.add('opacity-100');
+    });
+  }
+
+  function closeBroadcastModal() {
+    if (broadcastModal) {
+      broadcastModal.classList.add('opacity-0', 'pointer-events-none');
+      broadcastModal.classList.remove('opacity-100');
+    }
+  }
+
+  function confirmBroadcast() {
+    alert('Notifikasi Secret Drop berhasil dijadwalkan ke 1.140 nomor VIP member!');
+    closeBroadcastModal();
+  }
+
+  // Filter toolbar client search demo
+  const searchInput = document.getElementById('searchInput');
+  const tableRows = document.querySelectorAll('#customerTableBody tr');
+
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      const query = e.target.value.toLowerCase();
+      tableRows.forEach(row => {
+        const text = row.innerText.toLowerCase();
+        row.style.display = text.includes(query) ? '' : 'none';
+      });
+    });
+  }
+
+  // Filter tab active switch
+  const filterTabs = document.querySelectorAll('.filter-tab');
+  filterTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      filterTabs.forEach(t => {
+        t.classList.remove('bg-primary', 'text-on-primary', 'font-bold', 'shadow-sm');
+        t.classList.add('text-on-surface-variant');
+      });
+      tab.classList.add('bg-primary', 'text-on-primary', 'font-bold', 'shadow-sm');
+      tab.classList.remove('text-on-surface-variant');
+    });
+  });
+
+  // Export CSV mock trigger
+  const btnExport = document.getElementById('btnExport');
+  if (btnExport) {
+    btnExport.addEventListener('click', () => {
+      alert('Mengekspor 3.420 data profil pelanggan Barokah Atelier (Format CSV/UTF-8)...');
+    });
+  }
+</script></main></div></body></html>
